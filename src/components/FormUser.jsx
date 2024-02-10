@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
-export const FormUser = ({ createUser }) => {
+export const FormUser = ({ createUser, editUser }) => {
     const { handleSubmit, register, reset } = useForm();
+
+    useEffect(() => {
+        if (editUser) { } else { }
+    }, []);
 
     const submit = (data) => {
         createUser('/users/', data);

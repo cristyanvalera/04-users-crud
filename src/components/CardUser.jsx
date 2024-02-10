@@ -1,4 +1,12 @@
-export const CardUser = ({ user }) => {
+export const CardUser = ({ user, deleteUser, setEditUser }) => {
+    const onDelete = () => {
+        deleteUser('/users', user.id);
+    };
+
+    const onEdit = () => {
+        setEditUser(user);
+    };
+
     return (
         <article>
             <h3>{user.first_name} {user.last_name}</h3>
@@ -9,9 +17,14 @@ export const CardUser = ({ user }) => {
                 </li>
 
                 <li>
-                    <span>Cumpleaño: </span><span>{user.birthday}</span>
+                    <span>Cumpleaños: </span><span>{user.birthday}</span>
                 </li>
             </ul>
+
+            <div>
+                <button onClick={onDelete}>Delete</button>
+                <button onClick={onEdit}>Edit</button>
+            </div>
         </article>
     );
 };
