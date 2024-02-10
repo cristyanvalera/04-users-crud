@@ -15,7 +15,12 @@ function App() {
         <div>
             <h1>Users C.R.U.D.</h1>
 
-            <FormUser createUser={createUser} editUser={editUser} />
+            <FormUser
+                createUser={createUser}
+                editUser={editUser}
+                updateUser={updateUser}
+                setEditUser={setEditUser}
+            />
 
             <div>
                 {users?.map(user => (
