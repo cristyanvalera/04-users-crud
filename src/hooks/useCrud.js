@@ -14,7 +14,7 @@ export const useCrud = (urlBase) => {
         axios.post(`${urlBase}${path}/`, data)
             .then(response => {
                 setApiData([...apiData, response.data]);
-                console.log(response.data);
+                console.log('Creado con éxito');
             })
             .catch(error => console.log(error));
     };
@@ -34,7 +34,7 @@ export const useCrud = (urlBase) => {
                 setApiData(apiData.map(item =>
                     item.id === id ? response.data : item
                 ));
-                console.log(response);
+                console.log('Actualizado con éxito');
             })
             .catch(error => console.log(error));
     };
