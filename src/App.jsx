@@ -39,6 +39,7 @@ function App() {
                         user={user}
                         deleteUser={deleteUser}
                         setEditUser={setEditUser}
+                        setIsOpen={setIsOpen}
                     />
                 ))}
             </div>

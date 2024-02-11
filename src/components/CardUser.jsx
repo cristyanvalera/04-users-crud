@@ -1,11 +1,12 @@
 import './styles/card-user.css';
 
-export const CardUser = ({ user, deleteUser, setEditUser }) => {
+export const CardUser = ({ user, deleteUser, setEditUser, setIsOpen }) => {
     const onDelete = () => {
         deleteUser('/users', user.id);
     };
 
     const onEdit = () => {
+        setIsOpen(true);
         setEditUser(user);
     };
 
