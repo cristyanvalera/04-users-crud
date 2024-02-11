@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import './styles/form-user.css';
 
-export const FormUser = ({ createUser, editUser, updateUser, setEditUser }) => {
-    const [isOpen, setIsOpen] = useState(true);
+export const FormUser = ({ createUser, editUser, updateUser, setEditUser, isOpen, setIsOpen }) => {
     const { handleSubmit, register, reset } = useForm();
 
     useEffect(() => reset(editUser), [editUser]);
@@ -23,14 +22,21 @@ export const FormUser = ({ createUser, editUser, updateUser, setEditUser }) => {
             last_name: '',
             birthday: '',
         });
+
+        handleClose();
+    };
+
+    const handleClose = () => {
+        setIsOpen(false);
     };
 
     return (
-        <article className="form-background">
+        <div className={`form-background ${isOpen && 'able'}`}>
             <form onSubmit={handleSubmit(submit)} className="form-container">
-                <div className="form-close">
+                <div onClick={handleClose} className="form-close">
                     <ion-icon name="close-circle-outline"></ion-icon>
                 </div>
+
                 <h2 className="form-title">Nuevo Usuario</h2>
 
                 <div className="form-item">
@@ -62,6 +68,6 @@ export const FormUser = ({ createUser, editUser, updateUser, setEditUser }) => {
                     <button className="form-btn">Save</button>
                 </div>
             </form>
-        </article>
+        </div>
     );
 };

@@ -9,6 +9,13 @@
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(2px);
+    transform: scale(0);
+    transition: transform .25s;
+}
+
+.form-background.able {
+    transform: scale(1);
+    transition: transform .25s;
 }
 
 .form-container {
