@@ -25,8 +25,12 @@ export const CardUser = ({ user, deleteUser, setEditUser, setIsOpen }) => {
             </ul>
 
             <div>
-                <button onClick={onDelete}>Delete</button>
-                <button onClick={onEdit}>Edit</button>
+                <button onClick={onDelete}>
+                    <box-icon name='trash'></box-icon>
+                </button>
+                <button onClick={onEdit}>
+                    <box-icon name='edit-alt'></box-icon>
+                </button>
             </div>
         </article>
     );
