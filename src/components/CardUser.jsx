@@ -1,3 +1,5 @@
+import './styles/card-user.css';
+
 export const CardUser = ({ user, deleteUser, setEditUser }) => {
     const onDelete = () => {
         deleteUser('/users', user.id);
