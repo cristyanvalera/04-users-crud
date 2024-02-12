@@ -28,7 +28,6 @@ function App() {
                 >
                     + Crear nuevo usuario
                 </button>
-
             </header>
 
             <FormUser
