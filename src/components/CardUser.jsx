@@ -1,6 +1,8 @@
 import './styles/card-user.css';
 
 export const CardUser = ({ user, deleteUser, setEditUser, setIsOpen }) => {
+    const formatDate = new Date(user.birthday).toLocaleDateString();
+
     const onDelete = () => {
         deleteUser('/users', user.id);
     };
@@ -25,14 +27,14 @@ export const CardUser = ({ user, deleteUser, setEditUser, setIsOpen }) => {
 
                 <br />
 
-                <p>
+                <section>
                     <span>Cumpleaños</span>
                     <br />
                     <div className='adjust'>
                         <box-icon name='gift'></box-icon>
-                        <span>{user.birthday}</span>
+                        <span>{formatDate}</span>
                     </div>
-                </p>
+                </section>
             </div>
 
             <hr />
