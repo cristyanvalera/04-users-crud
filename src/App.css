@@ -43,3 +43,10 @@ li {
     width: 95%;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 480px) {
+    .app-cards {
+        display: flex;
+        flex-direction: column;
+    }
+}
