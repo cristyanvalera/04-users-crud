@@ -38,11 +38,11 @@ export const CardUser = ({ user, deleteUser, setEditUser, setIsOpen }) => {
             <hr />
 
             <footer className='footer'>
-                <button onClick={onDelete} className='btn-danger'>
+                <button onClick={onDelete} className='btn btn-danger'>
                     <box-icon name='trash'></box-icon>
                 </button>
 
-                <button onClick={onEdit} >
+                <button onClick={onEdit} className='btn'>
                     <box-icon name='edit-alt'></box-icon>
                 </button>
             </footer>

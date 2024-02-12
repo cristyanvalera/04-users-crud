@@ -28,6 +28,13 @@
     gap: 0.300rem;
 }
 
+.btn {
+    border: 0;
+    border-radius: .3em;
+    cursor: pointer;
+    padding: .5em;
+}
+
 .btn-danger {
     color: #fff;
     background-color: #dc3545;
