@@ -1,7 +1,7 @@
 .card {
     flex: 50%;
     margin: 10px;
-    border: 1px solid #eceaea;
+    border: 1px solid #c7c7c7;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
 }
 
 .content span:first-child {
-    color: #d3d0d0;
+    color: #bebdbd;
     text-transform: uppercase;
 }
 
