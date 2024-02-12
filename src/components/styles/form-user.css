@@ -19,12 +19,11 @@
 }
 
 .form-container {
-    background-color: gray;
+    background-color: white;
     padding: 25px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
     position: relative;
 }
@@ -37,10 +36,37 @@
     font-size: 25px;
 }
 
-.form-close:hover {
-    color: white;
+.form-title {
+    font-size: 1.5em;
 }
 
-.form-title {
-    text-align: center;
+label {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    display: block;
+    padding-bottom: .375rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .375rem;
+}
+
+.form-btn-group {
+    padding: .375rem;
+    display: block;
+}
+
+.form-btn {
+    width: 100%;
+    line-height: 1.1;
 }

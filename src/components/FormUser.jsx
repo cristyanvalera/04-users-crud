@@ -7,6 +7,16 @@ export const FormUser = ({ createUser, editUser, updateUser, setEditUser, isOpen
 
     useEffect(() => reset(editUser), [editUser]);
 
+    const resetAll = () => {
+        reset({
+            email: '',
+            password: '',
+            first_name: '',
+            last_name: '',
+            birthday: '',
+        });
+    };
+
     const submit = (data) => {
         if (editUser) {
             updateUser('/users/', editUser.id, data);
@@ -15,19 +25,14 @@ export const FormUser = ({ createUser, editUser, updateUser, setEditUser, isOpen
             createUser('/users/', data);
         }
 
-        reset({
-            email: '',
-            password: '',
-            first_name: '',
-            last_name: '',
-            birthday: '',
-        });
-
+        resetAll();
         handleClose();
     };
 
     const handleClose = () => {
         setIsOpen(false);
+
+        resetAll();
     };
 
     return (
@@ -39,33 +44,35 @@ export const FormUser = ({ createUser, editUser, updateUser, setEditUser, isOpen
 
                 <h2 className="form-title">Nuevo Usuario</h2>
 
-                <div className="form-item">
+                <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input {...register('email')} id="email" type="email" />
+                    <input className="form-control" {...register('email')} id="email" type="email" />
                 </div>
 
-                <div className="form-item">
+                <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input {...register('password')} id="password" type="password" />
+                    <input className="form-control" {...register('password')} id="password" type="password" />
                 </div>
 
-                <div className="form-item">
+                <div className="form-group">
                     <label htmlFor="first_name">Firstname</label>
-                    <input {...register('first_name')} id="first_name" type="texto" />
+                    <input className="form-control" {...register('first_name')} id="first_name" type="texto" />
                 </div>
 
-                <div className="form-item">
+                <div className="form-group">
                     <label htmlFor="last_name">Lastname</label>
-                    <input {...register('last_name')} id="last_name" type="texto" />
+                    <input className="form-control" {...register('last_name')} id="last_name" type="texto" />
                 </div>
 
-                <div className="form-item">
+                <div className="form-group">
                     <label htmlFor="birthday">Birthday</label>
-                    <input {...register('birthday')} id="birthday" type="date" />
+                    <input className="form-control" {...register('birthday')} id="birthday" type="date" />
                 </div>
 
-                <div>
-                    <button className="form-btn">Save</button>
+                <div className="form-btn-group">
+                    <button className="app-btn form-btn">
+                        Guardar Cambios
+                    </button>
                 </div>
             </form>
         </div>

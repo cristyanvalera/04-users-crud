@@ -19,9 +19,17 @@ function App() {
 
     return (
         <div>
-            <h1>Users CRUD</h1>
+            <header className='app-header'>
+                <h1>Users CRUD</h1>
 
-            <button onClick={handleOpen}>+ Crear nuevo usuario</button>
+                <button
+                    onClick={handleOpen}
+                    className='app-btn'
+                >
+                    + Crear nuevo usuario
+                </button>
+
+            </header>
 
             <FormUser
                 createUser={createUser}
@@ -32,7 +40,7 @@ function App() {
                 setIsOpen={setIsOpen}
             />
 
-            <div>
+            <div className='app-cards'>
                 {users?.map(user => (
                     <CardUser
                         key={user.id}

@@ -1,0 +1,42 @@
+.card {
+    flex: 50%;
+    margin: 10px;
+    border: 1px solid #eceaea;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    padding: 10px;
+}
+
+.content {
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.content span:first-child {
+    color: #d3d0d0;
+    text-transform: uppercase;
+}
+
+.footer {
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    gap: 0.300rem;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.adjust {
+    padding-top: 0.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
