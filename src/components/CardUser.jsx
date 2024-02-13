@@ -15,30 +15,24 @@ export const CardUser = ({ user, deleteUser, setEditUser, setIsOpen }) => {
     return (
         <article className='card'>
             <h3 className='card-title'>{user.first_name} {user.last_name}</h3>
-
             <hr />
 
-            <div className='content'>
-                <p>
-                    <span>Correo </span>
-                    <br />
-                    <span>{user.email}</span>
-                </p>
-
+            <div className="content">
+                <span>Correo </span>
                 <br />
+                <span>{user.email}</span>
+            </div>
 
-                <section>
-                    <span>Cumpleaños</span>
-                    <br />
-                    <div className='adjust'>
-                        <box-icon name='gift'></box-icon>
-                        <span>{formatDate}</span>
-                    </div>
-                </section>
+            <div className='content'>
+                <span>Cumpleaños</span>
+                <br />
+                <div className='adjust'>
+                    <box-icon name='gift'></box-icon>
+                    <span>{formatDate}</span>
+                </div>
             </div>
 
             <hr />
-
             <footer className='footer'>
                 <button onClick={onDelete} className='btn btn-danger'>
                     <box-icon name='trash'></box-icon>
