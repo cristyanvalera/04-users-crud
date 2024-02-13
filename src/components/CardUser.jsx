@@ -19,13 +19,13 @@ export const CardUser = ({ user, deleteUser, setEditUser, setIsOpen }) => {
 
             <div className="content">
                 <span>Correo </span>
-                <br />
+              
                 <span>{user.email}</span>
             </div>
 
             <div className='content'>
                 <span>Cumpleaños</span>
-                <br />
+                
                 <div className='adjust'>
                     <box-icon name='gift'></box-icon>
                     <span>{formatDate}</span>
